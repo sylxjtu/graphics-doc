@@ -63,7 +63,8 @@ void myDisplay() {
     glVertex2f(0.0f, 1.0f);
   glEnd();
   glDisable(GL_POLYGON_STIPPLE);
-
+  
+  // Flush to output
   glFlush();
 }
 
