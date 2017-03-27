@@ -43,56 +43,60 @@
   \tableofcontents
   \newpage
 
-  \part{几何图形的绘制}
-    \section{实验目的}
+  \section{几何图形的绘制}
+    \subsection{实验目的}
       利用OpenGL绘制简单的几何图形
-    \section{实验内容}
+    \subsection{实验内容}
       绘制点、直线（实线和虚线）、多边形（区分正反面）、多边形镂空
-    \section{实验代码}
+    \subsection{实验代码}
       \inputminted{cpp}{../src/shape.cpp}
-    \section{实验结果}
+    \subsection{实验结果}
       \myfigure{几何图形的绘制}{../img/shape.png}
-    \section{小结}
+    \subsection{小结}
+      通过这次实验，我学会了初始化OPENGL和使用OPENGL绘制简单的2D图形，初步认识了OPENGL1.0的状态机模型
 
-  \part{着色方式}
-    \section{实验目的}
+  \section{着色方式}
+    \subsection{实验目的}
       掌握OpenGL两种颜色模型：RGBA模型和颜色索引模型
-    \section{实验内容}
+    \subsection{实验内容}
       \begin{itemize}
         \item 利用RGBA模型对多边形进行着色
         \item 利用颜色索引模型对多边形进行着色
         \item 分别设置平滑和单色两种方式绘制多边形，观察两种方式的区别。
       \end{itemize}
-    \section{实验代码}
+    \subsection{实验代码}
       \inputminted{cpp}{../src/color.cpp}
-    \section{实验结果}
+    \subsection{实验结果}
       \myfigure{着色方式}{../img/color.png}
-    \section{小结}
+    \subsection{小结}
+      通过这次实验，我巩固了计算机内颜色表示的知识，初步认识了OPENGL的颜色模型的概念和使用方法
 
-  \part{三维场景的绘制}
-    \section{实验目的}
+  \section{三维场景的绘制}
+    \subsection{实验目的}
       掌握OpenGL的模型变换和视图变换、投影变换与视口变换，熟悉矩阵堆栈的操作。
-    \section{实验内容}
+    \subsection{实验内容}
       绘制太阳、地球与月亮，采用OpenGL各种变换，绘制它们之间的正确三维关系。
-    \section{实验代码}
+    \subsection{实验代码}
       \inputminted{cpp}{../src/threed.cpp}
-    \section{实验结果}
+    \subsection{实验结果}
       \myfigure{三维场景的绘制}{../img/threed.png}
-    \section{小结}
+    \subsection{小结}
+      通过这次实验，我学会了计算机图形学常用的3D视图变换的具体实现，学会了使用OPENGL编写3D程序
 
-  \part{纹理映射}
-    \section{小组成员}
-      \begin{enumerate}
+  \section{纹理映射}
+    \subsection{小组成员}
+      \begin{itemize}
         \item 软件51，沈俞霖，学号2151601013
         \item 软件51，李南辰，学号2151601010
-      \end{enumerate}
-    \section{实验目的}
+      \end{itemize}
+    \subsection{实验目的}
       掌握OpenGL的纹理映射功能，绘制真实感图形。
-    \section{实验内容}
+    \subsection{实验内容}
       采用绘制圆球和纹理映射的方式，实现地球仪的绘制，并加入光照、纹理等信息，使得所绘制的地球仪显得比较逼真。
-    \section{实验代码}
+    \subsection{实验代码}
       \inputminted{cpp}{../src/texture.cpp}
-    \section{实验结果}
+    \subsection{实验结果}
       \myfigure{纹理映射}{../img/texture.png}
-    \section{小结}
+    \subsection{小结}
+      通过这次实验我锻炼了我的综合能力，学会了使用OPENGL编写中等规模程序的方法和技巧
 \end{document}
