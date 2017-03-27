@@ -1,0 +1,98 @@
+% Begin header
+\documentclass[UTF8]{ctexart}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+\useunder{\uline}{\ul}{}
+\hypersetup{hidelinks}
+\graphicspath{ {images/} }
+\setmonofont{Fantasque Sans Mono}
+\setCJKmonofont{Microsoft YaHei}
+\setminted[cpp]{linenos, breaklines, tabsize=2}
+\newmintinline{cpp}{}
+\newmintinline[code]{text}{}
+\newcommand{\cppsubp}[1]{\subparagraph{\cppinline/{#1}/}\mbox{}\\}
+\newcommand{\myfigure}[2]{\begin{figure}[H]\caption{{#1}}\includegraphics[width=\textwidth,height=80mm,keepaspectratio]{{#2}}\centering\end{figure}}
+% End header
+
+\title{计算机图形学实验报告}
+\date{\today}
+\author{沈俞霖}
+
+\begin{document}
+  \maketitle
+  \vspace{80mm}
+  \begin{flushright}
+
+  \textbf{成员}     \makebox[7em][l]{软件51 沈俞霖}
+
+  \textbf{学号}     \makebox[7em][l]{2151601013}
+
+  \textbf{提交日期} \makebox[7em][l]{\today}
+
+  \textbf{联系电话} \makebox[7em][l]{13679119978}
+
+  \end{flushright}
+  \newpage
+
+  \tableofcontents
+  \newpage
+
+  \part{几何图形的绘制}
+    \section{实验目的}
+      利用OpenGL绘制简单的几何图形
+    \section{实验内容}
+      绘制点、直线（实线和虚线）、多边形（区分正反面）、多边形镂空
+    \section{实验代码}
+      \inputminted{cpp}{../src/shape.cpp}
+    \section{实验结果}
+      \myfigure{几何图形的绘制}{../img/shape.jpg}
+    \section{小结}
+
+  \part{着色方式}
+    \section{实验目的}
+      掌握OpenGL两种颜色模型：RGBA模型和颜色索引模型
+    \section{实验内容}
+      \begin{itemize}
+        \item 利用RGBA模型对多边形进行着色
+        \item 利用颜色索引模型对多边形进行着色
+        \item 分别设置平滑和单色两种方式绘制多边形，观察两种方式的区别。
+      \end{itemize}
+    \section{实验代码}
+      \inputminted{cpp}{../src/color.cpp}
+    \section{实验结果}
+      \myfigure{着色方式}{../img/color.jpg}
+    \section{小结}
+
+  \part{三维场景的绘制}
+    \section{实验目的}
+      掌握OpenGL的模型变换和视图变换、投影变换与视口变换，熟悉矩阵堆栈的操作。
+    \section{实验内容}
+      绘制太阳、地球与月亮，采用OpenGL各种变换，绘制它们之间的正确三维关系。
+    \section{实验代码}
+      \inputminted{cpp}{../src/threed.cpp}
+    \section{实验结果}
+      \myfigure{三维场景的绘制}{../img/threed.jpg}
+    \section{小结}
+
+  \part{纹理映射}
+    \section{小组成员}
+      \begin{enumerate}
+        \item 软件51，沈俞霖，学号2151601013
+        \item 软件51，李南辰，学号2151601010
+      \end{enumerate}
+    \section{实验目的}
+      掌握OpenGL的纹理映射功能，绘制真实感图形。
+    \section{实验内容}
+      采用绘制圆球和纹理映射的方式，实现地球仪的绘制，并加入光照、纹理等信息，使得所绘制的地球仪显得比较逼真。
+    \section{实验代码}
+      \inputminted{cpp}{../src/texture.cpp}
+    \section{实验结果}
+      \myfigure{纹理映射}{../img/texture.jpg}
+    \section{小结}
+\end{document}
